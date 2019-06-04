@@ -4,6 +4,7 @@ pipeline {
     stage("foo") {
 
       agent any
+      
 
       /*
        * Tools configured in Jenkins can be included at the Pipeline level or at the Stage Level.
