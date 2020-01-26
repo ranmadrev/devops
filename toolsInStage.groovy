@@ -1,7 +1,7 @@
 pipeline {
-  agent none
+  agent any
   stages {
-    stage("foo") {
+    stage("build") {
 
       agent any
       
