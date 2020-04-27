@@ -2,7 +2,9 @@
 - hosts: all
   tasks:
   - name: "Installing Docker Prerequisite packages"
-    yum: name: "{{ item }}" state: latest
+    yum:
+    name: "{{ item }}"
+    state: latest
     with_items:
     - yum-utils
     - device-mapper-persistent-data
@@ -14,10 +16,10 @@
     mode: 0644
   - name: " Installing Docker latest version"
     yum:
-      name: docker-ce
-      state: present
+    name: docker-ce
+    state: present
   - name: " Starting and Enabling Docker service"
-    service: 
-      name: docker 
-      state: started 
-      enabled: yes
+    service:
+    name: docker
+    state: started
+    enabled: yes
