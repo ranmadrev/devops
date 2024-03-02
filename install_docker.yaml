@@ -17,9 +17,9 @@
   - name: " Installing Docker latest version"
     yum:
       name: docker-ce
-      state: absent
+      state: present
   - name: " Starting and Enabling Docker service"
     service:
       name: docker
       state: started
-      enabled: no
+      enabled: yes
